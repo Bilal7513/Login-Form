@@ -40,8 +40,8 @@ export default function Login() {
                         <p className={`${success ? "text-green-600" : "text-red-600"} font-bold`}>{msg}</p>
                         <button type='submit' className='bg-white outline-0 text-black rounded-2xl w-[80%] mt-4 px-8 py-2 text-lg font-medium cursor-pointer'>Login</button>
                     </form>
-                    <button className='mt-4 bg-[#A50E0E] cursor-pointer outline-0 rounded-2xl w-[80%] px-8 py-2 text-lg font-medium' onClick={() => signInWithBrowser("Google")}>Sign in with Google</button>
-                    <button className='mt-4 bg-[#F65314] cursor-pointer outline-0 rounded-2xl w-[80%] px-8 py-2 text-lg font-medium' onClick={() => signInWithBrowser("Microsoft")}>Sign in with Microsoft</button>
+                    <button className='mt-4 bg-[#174EA6] cursor-pointer outline-0 rounded-2xl w-[80%] px-8 py-2 text-lg font-medium' onClick={() => signInWithBrowser("Google")}>Sign in with Google</button>
+                    <button className='mt-4 bg-[#00a1f1] cursor-pointer outline-0 rounded-2xl w-[80%] px-8 py-2 text-lg font-medium' onClick={() => signInWithBrowser("Microsoft")}>Sign in with Microsoft</button>
                     <p className='text-white mt-4'><Link className='underline' href={'/Signup'}>Create new account.</Link></p>
                 </div>
             </div>
