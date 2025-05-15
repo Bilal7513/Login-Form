@@ -5,7 +5,7 @@ import { setCookie, setUsername } from "@/utlis/cookies";
 import { jwtDecode } from "jwt-decode";
 
 
-export default function CallbackPage() {
+export default function CallbackClient() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const DOMAIN = process.env.NEXT_PUBLIC_COGNITO_DOMAIN;
