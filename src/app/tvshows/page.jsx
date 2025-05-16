@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState, useContext } from 'react'
-import allTvshowsApi from '@/hooks/allTvshowsApi'
+import useAllTvshowsApi from '@/hooks/useAllTvshowsApi'
 import MovieCard from '@/components/MovieCard'
 import MovieDetails from '@/components/MovieDetails'
 import { useSelector } from 'react-redux'
@@ -8,7 +8,7 @@ import UserContext from '@/context/UserContext'
 
 function AllTvShows() {
   const [page, setPage] = useState(1);
-  const {tvShows} = allTvshowsApi(page)
+  const {tvShows} = useAllTvshowsApi(page)
   const [selectedTvShow, setSelectedTvShow] = useState(null)
   const searchResult = useSelector((state) => state.search.results)
   const isSearching = searchResult.length > 0;

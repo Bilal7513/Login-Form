@@ -1,14 +1,14 @@
 "use client"; 
 import React, { useContext } from "react";
 import MovieCard from '../components/MovieCard'
-import sectionApi from '../hooks/sectionApi'
+import useSectionApi from '../hooks/useSectionApi'
 import Hero from '../components/Hero'
 import MovieDetails from '../components/MovieDetails'
 import { useSelector } from 'react-redux'
 import UserContext from '../context/UserContext'
 
 export default function Home() {
-  const {movies} = sectionApi()
+  const {movies} = useSectionApi()
   const allMovies = movies.slice(0, 16)
   const [selectedMovie, setSelectedMovie] = React.useState(null)
   const searchResult = useSelector((state) => state.search.results)

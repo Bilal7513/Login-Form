@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react'
 
-function allTvshowsApi(page) {
-  const [tvShows, setTvShows] = useState([])
+function useMovieGenreApi() {
+  const [movies, setMovies] = useState([])
   
       useEffect(() => {
           const fetchMovies = async () => {
               try {
                   const response = await fetch(
-                      `https://api.themoviedb.org/3/discover/tv?api_key=4638fd7e1f9a447f699d14ff279cf2b4&with_watch_providers=8&watch_region=US&with_watch_monetization_types=flatrate&language=en-US&page=${page}`
+                      `https://api.themoviedb.org/3/genre/movie/list?api_key=4638fd7e1f9a447f699d14ff279cf2b4&language=en-US`
                   );
                   const data = await response.json();
-                  setTvShows(data.results);
+                  setMovies(data.genres);
                   
               } catch (error) {
                   console.error("Error fetching movies:", error);
@@ -18,8 +18,8 @@ function allTvshowsApi(page) {
           };
           
           fetchMovies();
-      }, [page]);
-      return {tvShows}
+      }, []);
+      return {movies}
 }
 
-export default allTvshowsApi
+export default useMovieGenreApi

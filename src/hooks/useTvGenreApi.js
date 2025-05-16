@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-function tvGenreApi() {
+function useTvGenreApi() {
     const [movies, setMovies] = useState([])
   
     useEffect(() => {
@@ -23,4 +23,4 @@ function tvGenreApi() {
     return {movies}
 }
 
-export default tvGenreApi
+export default useTvGenreApi

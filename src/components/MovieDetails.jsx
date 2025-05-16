@@ -1,6 +1,6 @@
 import React from 'react'
-import movieGenreApi from '../hooks/movieGenreApi';
-import tvGenreApi from '../hooks/tvGenreApi';
+import movieGenreApi from '../hooks/useMovieGenreApi';
+import tvGenreApi from '../hooks/useTvGenreApi';
 
 function MovieDetails({ movie, onClose }) {
     if (!movie) return null

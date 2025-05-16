@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 
-function sliderApi() {
+function useSliderApi() {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
@@ -23,4 +23,4 @@ function sliderApi() {
     return {movies}
 }
 
-export default sliderApi
+export default useSliderApi

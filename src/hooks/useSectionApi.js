@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 // const API_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`;
 
 
-function sectionApi() {
+function useSectionApi() {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
@@ -24,4 +24,4 @@ function sectionApi() {
     return {movies}
 }
 
-export default sectionApi
+export default useSectionApi

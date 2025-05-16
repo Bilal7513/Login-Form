@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState, useContext } from 'react'
-import allMoviesApi from '@/hooks/allMoviesApi'
+import useAllMoviesApi from '@/hooks/useAllMoviesApi'
 import MovieCard from '@/components/MovieCard';
 import MovieDetails from '@/components/MovieDetails';
 import { useSelector } from 'react-redux'
@@ -8,7 +8,7 @@ import UserContext from '@/context/UserContext'
 
 function AllMovies() {
   const [page, setPage] = useState(1);
-  const {movies} = allMoviesApi(page)
+  const {movies} = useAllMoviesApi(page)
   const [selectedMovie, setSelectedMovie] = useState(null)
   const searchResult = useSelector((state) => state.search.results)
   const isSearching = searchResult.length > 0;
