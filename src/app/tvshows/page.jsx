@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState, useContext } from 'react'
-import allTvshowsApi from '@/hooks/allTvshowsApi'
+import allTvshowsApi from '@/hooks/useAllTvshowsApi'
 import MovieCard from '@/components/MovieCard'
 import MovieDetails from '@/components/MovieDetails'
 import { useSelector } from 'react-redux'

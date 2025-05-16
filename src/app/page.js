@@ -1,7 +1,7 @@
 "use client"; 
 import React, { useContext } from "react";
 import MovieCard from '../components/MovieCard'
-import sectionApi from '../hooks/sectionApi'
+import sectionApi from '../hooks/useSectionApi'
 import Hero from '../components/Hero'
 import MovieDetails from '../components/MovieDetails'
 import { useSelector } from 'react-redux'

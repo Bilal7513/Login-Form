@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import sliderApi from '../hooks/sliderApi'
+import sliderApi from '../hooks/useSliderApi'
 
 function Hero() {
   const [i, setI] = useState(0)
